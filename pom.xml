@@ -1,0 +1,32 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>localdomain.localhost.mng6209</groupId>
+  <artifactId>parent</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <profiles>
+    <profile>
+      <id>build</id>
+      <modules>
+        <module>extjar1</module>
+        <module>extjar2</module>
+        <module>plugin1</module>
+        <module>plugin2</module>
+      </modules>
+      <build>
+        <defaultGoal>clean install</defaultGoal>
+      </build>
+    </profile>
+    <profile>
+      <id>test</id>
+      <modules>
+        <module>probe1</module>
+        <module>probe2</module>
+        <module>probe3</module>
+      </modules>
+      <build>
+        <defaultGoal>validate</defaultGoal>
+      </build>
+    </profile>
+  </profiles>
+</project>
